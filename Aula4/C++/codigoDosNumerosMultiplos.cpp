@@ -11,13 +11,17 @@ int main()
     while (!false)
     {
         cout << endl
+
              << "Numero A: ";
         int numA;
         cin >> numA;
+
         cout << endl
+
              << "Numero B: ";
         int numB;
         cin >> numB;
+
         if (numA % numB == 0 || numB % numA == 0)
         {
             cout << endl

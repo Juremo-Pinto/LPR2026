@@ -11,9 +11,9 @@ namespace Tabuada
         {
             falar("Insira o raio do seu circulo: ");
             double raio = ouvir2();
-            double area = 3.14159 * (raio * raio);
+            double area = 3.14159 * (raio ^ 2);
             falar($"A area do circulo é : {area}");
-            
+
         }
     }
 }

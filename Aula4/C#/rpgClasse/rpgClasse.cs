@@ -21,62 +21,10 @@ namespace Tabuada
         static void falarEnd(string m) => Console.WriteLine(m);
         static int ouvirNum() => Convert.ToInt32(Console.ReadLine());
         static double ouvir2() => Convert.ToDouble(Console.ReadLine());
-        static void classAtribute()
-        {
-            if (classe = 1)
-            {
-                string name = "Guerreiro";
-                string hab1 = "Defesa Total";
-                string hab2 = "Ataque Pesado";
-            }
-            else if (classe = 2)
-            {
-                string name = "Arqueiro";
-                string hab1 = "Flecha Precisa";
-                string hab2 = "Disparo Triplo";
-            }
-            else if (classe = 3)
-            {
-                string name = "Mago";
-                string hab1 = "Bola de Fogo";
-                string hab2 = "Escudo de Gelo";
-            }
-            else
-            {
-                falarEnd("erro, opção invalida...");
-                break;
-            }
-        }
-        static void classFeedback()
-        {
-            switch (classe)
-            {
-                case 1:
-
-                    falarEnd($"Você escolheu {name}: ");
-                    falarEnd("Habilidades :");
-                    falar($"-> {hab1}");
-                    falar($"-> {hab2}");
-                case 2:
-
-                    falarEnd($"Você escolheu {name}: ");
-                    falarEnd("Habilidades :");
-                    falar($"-> {hab1}");
-                    falar($"-> {hab2}");
-                case 3:
-
-                    falarEnd($"Você escolheu {name}: ");
-                    falarEnd("Habilidades :");
-                    falar($"-> {hab1}");
-                    falar($"-> {hab2}");
-                case default:
-                    falar("q?");
-            }
-        }
+        static int classe = 0;
+        static string name, hab1, hab2;
         static void Main()
         {
-            int classe = ouvirNum();
-
             falar("Escolha uma classe");
 
             falarEnd("Guerreiro = 1");
@@ -86,9 +34,66 @@ namespace Tabuada
             classAtribute();
 
             classFeedback();
-
         }
+        static void classAtribute()
+        {
+            classe = ouvirNum();
 
+            switch (classe)
+            {
+                case 1:
+                    name = "Guerreiro";
+                    hab2 = "Ataque Pesado";
+                    hab1 = "Defesa Total";
+                break;
+
+                case 2:
+                    name = "Arqueiro";
+                    hab1 = "Flecha Precisa";
+                    hab2 = "Disparo Triplo";
+                break;
+
+                case 3:
+                    name = "Mago";
+                    hab1 = "Bola de Fogo";
+                    hab2 = "Escudo de Gelo";
+                break;
+
+                default:
+                    falarEnd("erro, opção invalida...");
+                break;
+            }
+        }
+        static void classFeedback()
+        {
+            switch (classe)
+            {
+
+                case 1:
+                    falarEnd($"Você escolheu {name}: ");
+                    falarEnd("Habilidades :");
+                    falar($"-> {hab1}");
+                    falar($"-> {hab2}");
+                break;
+
+                case 2:
+                    falarEnd($"Você escolheu {name}: ");
+                    falarEnd("Habilidades :");
+                    falar($"-> {hab1}");
+                    falar($"-> {hab2}");
+                break;
+
+                case 3:
+                    falarEnd($"Você escolheu {name}: ");
+                    falarEnd("Habilidades :");
+                    falar($"-> {hab1}");
+                    falar($"-> {hab2}");
+                break;
+
+                default:
+                    falar("q?");
+                break;
+            }
+        }
     }
-
 }

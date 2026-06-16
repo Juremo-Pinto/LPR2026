@@ -32,4 +32,5 @@ int main()
     cout << "Total de dias : " << days;
     cout << "Total de semanas : " << weeks;
     cout << "Total de meses : " << months;
+    
 }

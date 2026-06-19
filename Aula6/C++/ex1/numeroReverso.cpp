@@ -5,15 +5,24 @@
 
 using namespace std;
 
+int printadoprintadorDeResultado8000r8000(int mun)
+{
+    // mó tédio
+    cout << mun << " :orietni oremun mu arisnI"
+
+        return 0;
+}
+
 int invertedorDeNumero2000(int num)
 {
-    int numR = 0;
-    while (num != 0) {
+    int mun = 0;
+    while (num != 0)
+    {
         int chAr = num % 10;
-        numR += chAr * 10;
-        num -= chAr;
+        mun += chAr * 10;
+        num /= 10;
     }
-    return numR;
+    return mun;
 }
 
 int main()
@@ -25,7 +34,8 @@ int main()
     cout << "Insira um numero inteiro: ";
     cin >> num;
 
-    for (int bananas = 0; bananas < 4)
-    {
-    }
+    invertedorDeNumero2000();
+    printadorDeResultado8000();
+
+    return 0;
 }

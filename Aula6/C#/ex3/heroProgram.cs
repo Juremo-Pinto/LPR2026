@@ -117,7 +117,7 @@ namespace Tabuada
         static int pontuacaoTotal()
         {
             
-        }
+        } //ARRRRRRRRGH DIFICL DEMAIS
         static void exibirEquipe()
         {
             falar("");

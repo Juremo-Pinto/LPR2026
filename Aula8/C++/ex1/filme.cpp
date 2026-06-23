@@ -2,6 +2,7 @@
 #include <windows.h>
 #include <locale>
 #include <array>
+#include <limits>
 
 using namespace std;
 
@@ -21,25 +22,26 @@ int main()
 
     array<Filme, 3> colecao;
 
-    for (int bananas = 0; bananas > 3; bananas++)
+    for (int bananas = 0; bananas < 3; bananas++)
     {
         cout << "Nome do " << bananas + 1 << "o filme: ";
-        cin >> colecao[bananas].titulo;
+        getline(cin, colecao[bananas].titulo);
         cout << "Nome do diretor: ";
-        cin >> colecao[bananas].diretor;
+        getline(cin, colecao[bananas].diretor);
         cout << "Data de lançamento: ";
         cin >> colecao[bananas].anoLancamento;
         cout << "Duração do filme: ";
         cin >> colecao[bananas].duracaoMin;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
     }
 
     for (Filme filme : colecao)
     {
-        cout << filme.titulo << "(" << filme.anoLancamento << ")";
+        cout << filme.titulo << " (" << filme.anoLancamento << ")" << endl;
     }
 
     int filmeVeio = 0;
-    for (int filme = 0; filme > 3; filme++)
+    for (int filme = 0; filme < 3; filme++)
     {
         if (colecao[filme].anoLancamento < colecao[filme + 1].anoLancamento)
         {

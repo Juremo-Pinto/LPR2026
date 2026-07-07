@@ -13,7 +13,7 @@ int main()
     setlocale(LC_ALL, "pt_BR.utf8"); // permite usar acentuação e interpretar caracteres utf-8
 
     vector<int> numOdd;
-    vector<int> numEven;
+    vector<int> numEven;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
     int num[10];
 

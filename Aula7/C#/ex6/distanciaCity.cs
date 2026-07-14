@@ -16,18 +16,17 @@ namespace Tabuada
         static void Main()
         {
 
-            bool KILL_CODE = false;
-
-            while (KILL_CODE == false)
-            {
-
-                int[,] cities =
+            int[,] cities =
                 {
                 {0, 524, 521, 882}, //vitoria 0
                 {524, 0, 434, 586}, //bh 1
                 {524, 434, 0, 429}, //riodejaneir 2
                 {882, 586, 429, 0}  //saopaulo 3
                 };
+
+            while (true)
+            {
+
                 int dist;
 
                 falarEndl("Saiba a distancia entre estas 4 cidades em especifico!\n");
@@ -40,9 +39,7 @@ namespace Tabuada
                 falarEndl($"A distancia é {dist}km.");
 
                 if (dist == 0)
-                    KILL_CODE = true;
-                else
-                    KILL_CODE = false;
+                    return;
             }
         }
     }

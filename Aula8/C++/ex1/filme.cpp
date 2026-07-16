@@ -1,3 +1,4 @@
+#include "bits/stdc++.h"
 #include <iostream>
 #include <windows.h>
 #include <locale>
@@ -40,13 +41,14 @@ int main()
         cout << filme.titulo << " (" << filme.anoLancamento << ")" << endl;
     }
 
-    int filmeVeio = 0;
-    for (int filme = 0; filme < 3; filme++)
+    int indexMaisAntigo = 0;
+    for (size_t i = 1; i < colecao.size(); ++i)
     {
-        if (colecao[filme].anoLancamento < colecao[filme + 1].anoLancamento)
+        if (colecao[i].anoLancamento < colecao[indexMaisAntigo].anoLancamento)
         {
-            filmeVeio = filme;
+            indexMaisAntigo = static_cast<int>(i);
         }
     }
-    cout << "O filme mais antigo é: " << filmeVeio;
+    cout << "O filme mais antigo é: " << colecao[indexMaisAntigo].titulo
+         << " (" << colecao[indexMaisAntigo].anoLancamento << ")" << endl;
 }
